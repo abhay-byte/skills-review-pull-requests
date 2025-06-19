@@ -122,6 +122,15 @@
     );
   }
 
+  // Determine lose
+  function hasLose() {
+    return (
+      rows.some(hasAllSame) ||
+      columns.some(hasAllSame) ||
+      diagonals.some(hasAllSame)
+    );
+  }
+
   // Determine if every cell matches
   function hasAllSame(arr) {
     return arr.every(
